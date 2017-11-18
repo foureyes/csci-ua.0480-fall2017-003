@@ -1,3 +1,10 @@
+---
+layout: homework
+title: CSCI-UA.0480 - Homework #8
+---
+<div class="panel panel-default">
+	<div class="panel-heading">Homework #6</div>
+	<div class="panel-body" markdown="block">
 
 # AJAX
 
@@ -12,7 +19,7 @@ You'll be using the following concepts:
 
 ### Description
 
-Building on the concept of express applications, you will be creating a "single page application" that allows users to filter restaurants from a list and add new ones. The application will use AJAX POSTs and GETs instead of form submissions
+Building on the concept of express applications, you will be creating a "single page application" that allows users to filter restaurants from a list and add new ones. The application will use AJAX POSTs and GETs instead of regular form submissions
 
 You will:
 
@@ -109,3 +116,7 @@ For example,
 
 1. Form Validation:  Users should not be able to post requests for adding restaurants if any of the form fields are empty
 2. Duplicate check: Users should not be able to save duplicated entries to the database
+
+</div>
+
+</div>
