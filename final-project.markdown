@@ -245,7 +245,7 @@ Choose at least __8 points__ worth of these following topics (research and imple
 <br>
 <br>
 
-### __11/29 11PM__ - Final Project Complete and Code is fully  _Deployed_ 
+### __11/4 11PM__ - Final Project Complete and Code is fully  _Deployed_ 
 {% comment %}
 
 * __all commits must be in by Thursday, April 27th__ (repositories will be closed early Friday morning)
