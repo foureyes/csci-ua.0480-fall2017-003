@@ -58,7 +58,6 @@ single-page-app
     package.json        
     .gitignore
     /public
-        index.html      // the 'single' page in your single page web app
         /javascripts
             main.js     // write your client side JavaScript here
         /stylesheets
@@ -82,9 +81,10 @@ Note that this will be implemented __as a single page web app__. This means that
 
 ### Fetching and Filtering:
 
-1. Create a route `GET /places` which returns all the restaurants existing in your database
-    1. This route should support query string parameters which give the user the ability to specify the `location`, `cuisine`, or both.
-    2. It should return a JSON object. For example, `GET /places?location=West%20Village&cuisine=Turkish`
+1. Create a route in `routes/places.js` that responds to `GET /api/places` which returns all the restaurants existing in your database
+    1. Note that __because the router is mounted on /api__ the first argument to `router.get` will be `/places`, since it will be prefixed with `api`
+    2. This route should support query string parameters which give the user the ability to specify the `location`, `cuisine`, or both.
+    3. It should return a JSON object. For example, `GET /api/places?location=West%20Village&cuisine=Turkish`
 could return:
         ```
 [
@@ -96,7 +96,7 @@ could return:
 ]
 ```
     3. Note that there could be more than one restaurant in the resulting json.
-    4. To test, enter the url `http://localhost:3000/places` in your browser; you should get JSON back
+    4. To test, enter the url `http://localhost:3000/api/places` in your browser; you should get JSON back
 
 2. Using JavaScript in `main.js`, modify the form so that when the button is pressed:
     1. the regular form button press event isn't triggered (use `preventDefault`)
@@ -112,7 +112,7 @@ Putting everything together, this should look like (note that the network tab is
 
 ### Adding New Restaurants
 
-1. You will need to create another route `POST /places` which will create a new restaurant based on the request's body
+1. You will need to create another route `POST /api/places` which will create a new restaurant based on the request's body
     * it should give back a JSON object as the response
     * it should send back the object inserted, if successful
     * otherwise, send back an object with a key called error... with a value containing an error message
