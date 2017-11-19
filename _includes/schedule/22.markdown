@@ -43,7 +43,8 @@
 
 </td>
 	<td markdown="block">
-<!--
-* [](assignments/.html)
--->
+
+Due __Monday__, Nov 27th at 11PM 
+
+* [Homework #08](homework/08.html)
 </td>
