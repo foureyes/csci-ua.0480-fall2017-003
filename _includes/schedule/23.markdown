@@ -6,9 +6,15 @@
 * [More Example Code for Socket.io](https://github.com/nyu-csci-ua-0480-001-fall-2016/examples/blob/master/class25/socketio-racer-and-grid/grid-app.js)
 {% endcomment %}
 
+* _Realtime_ Web Applications
+* Previous Class on Promises
+* [Socket.io](slides/23/socketio.html)
+
+{% comment %}
 * socket.io in 20 minutes! (see previous class slides)
 * socket.io lab demo
 * (optional) [Rooms](slides/25/socketio-rooms.html) 
+{% endcomment %}
 
 
 {% comment %}
@@ -40,13 +46,17 @@
 * Chapter 
 -->
 
+* [Socket IO How-To](http://socket.io/docs/)
 * (optional) [Socket IO Rooms](http://socket.io/docs/rooms-and-namespaces/)
 
 </td>
 	<td markdown="block">
+{% comment %}
+
 Due __today__ while you're in class:
 
 * [Socket IO Lab](homework/socket-io-lab.html)
     * [Form to submit](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSdgAevTOMytBZfSEGmmfLuENQgvek0B7g0WA7J-q-WFjl_07g/viewform)
 
+{% endcomment %}
 </td>

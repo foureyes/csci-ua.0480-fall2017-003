@@ -1,6 +1,8 @@
 	<td markdown="block">
+
 * Previous class on AJAX 
-* Previous class on Promises
+* [Promises](slides/21/promises.html)
+
 {% comment %}
 * AJAX Polling Code Examples to be Posted
     * AJAX Polling Chat
@@ -8,6 +10,7 @@
 * Realtime Apps with Socket.io
     * [Socket.io](slides/23/socketio.html)
     * Example Code for Socket.io Chat to be Posted
+
 {% endcomment %}
 
 
