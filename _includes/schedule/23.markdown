@@ -9,6 +9,7 @@
 * _Realtime_ Web Applications
 * Previous Class on Promises
 * [Socket.io](slides/23/socketio.html)
+* [Example Code for AJAX Polling / Chat](code/chat.zip)
 
 {% comment %}
 * socket.io in 20 minutes! (see previous class slides)
