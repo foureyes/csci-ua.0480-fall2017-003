@@ -354,11 +354,9 @@ show react basics
 <!-- ------------ --><a name="24"></a>
 <tr><td>24</td><td><strong>Nov 28</strong><br>Tue</td>
 <td markdown="block">
-* SocketIO - Lab
+* SocketIO
 </td>
-<td></td><td></td><td markdown="block"></td>{% comment %}
 {% include schedule/24.markdown %}
-{% endcomment %}
 </tr>
 
 
@@ -366,6 +364,7 @@ show react basics
 <tr><td>25</td><td><strong>Nov 30</strong><br>Thu</td>
 <td markdown="block">
 
+* SocketIO - Lab
 * Frontend Framework
 
 </td>
