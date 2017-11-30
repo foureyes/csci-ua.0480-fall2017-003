@@ -33,7 +33,7 @@ You'll be using the following concepts:
 
 ### Description / Requirements
 
-<span sytle="background-color: #ffaabb">Make a real time web app that:</span>
+<span style="background-color: #ffaabb; font-size: 2.25rem">Make a real time web app that:</span>
 
 1. displays two emoji
 2. displays two buttons
