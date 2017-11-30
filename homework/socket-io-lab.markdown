@@ -31,9 +31,9 @@ You'll be using the following concepts:
 * some simple dom manipulation
 * absolute or fixed positioning
 
-### Description
+### Description / Requirements
 
-Make a real time web app that:
+<span sytle="background-color: #ffaabb">Make a real time web app that:</span>
 
 1. displays two emoji
 2. displays two buttons
@@ -41,8 +41,10 @@ Make a real time web app that:
 4. clicking on one button moves one emoji
 5. everyone connected to the game can click either button
 6. everyone connected to the game can see the emoji move in real time
-7. when someone new connects to the game, the should see the current position of both emoji
+    * be careful in choosing `socket.emit`, `io.emit`, and `socket.broadcast.emit`
+7. when someone new connects to the game, __they should see the current position of both emoji__
 8. (optional) end game and show message when one emoji crosses the finish line
+9. __there are hints at the end of these instructions__
 
 
 ![Emoji Racer](../resources/img/hw09-screen.gif)
