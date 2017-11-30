@@ -4,15 +4,15 @@ title: CSCI-UA.0480 - Socket IO Lab
 ---
 
 <div class="panel panel-default">
-	<div class="panel-heading">socket.io Lab</div>
-	<div class="panel-body" markdown="block">
+  <div class="panel-heading">socket.io Lab</div>
+  <div class="panel-body" markdown="block">
 
 # Socket IO Lab - Emoji Racer (10 points for In-Class Project/Quiz Grade)
 
 ## Submission Process
 
 * work in groups of 2 or 3
-* __submit using [this form](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSdgAevTOMytBZfSEGmmfLuENQgvek0B7g0WA7J-q-WFjl_07g/viewform)__
+* __submit using [this form](https://docs.google.com/forms/d/e/1FAIpQLSd1UqaFt4HVrj9j1IaHdx-2EpBQtjBfIELBxoM3r7_XrfhtZQ/viewform)__
 * __each person on the team should submit their own individual form__
 
 ## Scoring
@@ -54,27 +54,29 @@ Make a real time web app that:
 
 Use the _one-page_ version of the slides to guide you through socket.io:
 
-[https://foureyes.github.io/csci-ua.0480-spring2017-008/slides/23/socketio.html?print-pdf#/](https://foureyes.github.io/csci-ua.0480-spring2017-008/slides/23/socketio.html?print-pdf#/)
+[https://foureyes.github.io/csci-ua.0480-fall2017-007/slides/23/socketio.html?print-pdf#/](https://foureyes.github.io/csci-ua.0480-fall2017-007/slides/23/socketio.html?print-pdf#/)
 
 1. create a directory to store your project
 2. create your `package.json` and install these packages:
-	<pre><code data-trim contenteditable>
+  <pre><code data-trim contenteditable>
 npm init
 npm install --save express socket.io
 </code></pre>
 3. use this boilerplate code for the server (perhaps in server.js or app.js):
     <pre><code data-trim contenteditable>
-var express = require('express');
-var app = express();
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
+const express = require('express');
+const app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 app.use(express.static('public'));
 // server code goes here!
+// first listen for connection using io.on
+// then... within callback, use socket.on, socket.emit, socket.broadcast, etc.
 // NOTE THAT WE ARE LISTENING WITH server, NOT app!
 server.listen(3000);
 </code></pre>
 4. use this boilerplate code for the markup (in `public/index.html`):
-	<pre><code data-trim contenteditable>
+  <pre><code data-trim contenteditable>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -102,10 +104,10 @@ server.listen(3000);
 ### Deploying to glitch.com
 
 1. [go to glitch.com/edit](https://glitch.com/edit/)
-2. fill out package.json with socket.io and express requirements
+2. modify the existing `package.json` so that it has both socket.io and express as requirements (but keep everything else the same)
 3. add/modify necessary files!
     * for example...
-    * modify `server.js` (make sure you're listetning with
+    * modify `server.js` (make sure you're listening with server obj)
     * add `public/racer.html`
     * change the name of `public/client.js` to `public/racer.js`
     * etc.
@@ -192,3 +194,5 @@ function main() {
 
 </div>
 </div>
+
+

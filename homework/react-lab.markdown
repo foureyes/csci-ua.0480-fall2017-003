@@ -4,28 +4,22 @@ title: CSCI-UA.0480 - Socket IO Lab
 ---
 
 <div class="panel panel-default">
-	<div class="panel-heading">React Lab</div>
-	<div class="panel-body" markdown="block">
+  <div class="panel-heading">socket.io Lab</div>
+  <div class="panel-body" markdown="block">
 
-# React Lab - Binary Number or Card Calculator (10 points for In-Class Project/Quiz Grade)
+# Socket IO Lab - Emoji Racer (10 points for In-Class Project/Quiz Grade)
 
 ## Submission Process
 
 * work in groups of 2 or 3
-* choose one of the applications described below in the Overview &rarr; Description and implement it
-* __submit using [this form](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSeyWVIq2ymcFrsLWf5bB6APGDreDIbb3AqJlf9Cqx413Aa97w/viewform)__
+* __submit using [this form](https://docs.google.com/forms/d/e/1FAIpQLSd1UqaFt4HVrj9j1IaHdx-2EpBQtjBfIELBxoM3r7_XrfhtZQ/viewform)__
 * __each person on the team should submit their own individual form__
-* once you've submitted:
-    * raise your hand to let me know
-    * either...
-        1. help others with their lab
-        2. try the other application!
 
 ## Scoring
 
 * __+7 points__ for showing up and submitting form 
 * __+2 points__ form submitted with a _reasonable_ amount of _valid looking_ code
-* __+1 point__ code deployed on [codepen.io](https://codepen.io)
+* __+1 point__ code deployed on glitch.com (kind of optional, since you basically get 90% for just submitting a form with some code!)
 
 ## Overview
 
@@ -33,79 +27,171 @@ title: CSCI-UA.0480 - Socket IO Lab
 
 You'll be using the following concepts:
 
-* React
-    * props
-    * state
-    * events
-    * nested components
-    * form elements
-
+* socket.io
+* some simple dom manipulation
+* absolute or fixed positioning
 
 ### Description
 
-Create __one of these two applications__:
+Make a real time web app that:
 
-1. an application that calculates the decimal value of an 8-bit binary number 
-1. an application that calculates the total of a hand of cards
+1. displays two emoji
+2. displays two buttons
+3. displays a finish line
+4. clicking on one button moves one emoji
+5. everyone connected to the game can click either button
+6. everyone connected to the game can see the emoji move in real time
+7. when someone new connects to the game, the should see the current position of both emoji
+8. (optional) end game and show message when one emoji crosses the finish line
+
+
+![Emoji Racer](../resources/img/hw09-screen.gif)
+
 
 ## Instructions
 
 ### Setup
 
-You can develop your application with any tools that you like. If you'd like to use what we learned in the lectures, you can choose either of these methods:
+Use the _one-page_ version of the slides to guide you through socket.io:
 
-1. use `create-react-app`
-    * allows quick setup for local development
-    * you can use your own text editor!
-    * [see the instructions on setting up create-react-app in the slides](../slides/26/react-state-parent.html#/15)
-2. create a new project (pen) in [codepen.io](https://codepen.io)
-    * debugging might be difficult
-    * ...but your application will already be deployed!
-    * to setup, configure babel as your JavaScript pre-processor and add React and ReactDOM Libraries:
-        <br>
-        ![codepen](../resources/img/codepen.gif)
+[https://foureyes.github.io/csci-ua.0480-fall2017-007/slides/23/socketio.html?print-pdf#/](https://foureyes.github.io/csci-ua.0480-fall2017-007/slides/23/socketio.html?print-pdf#/)
 
-### Implementation
+1. create a directory to store your project
+2. create your `package.json` and install these packages:
+  <pre><code data-trim contenteditable>
+npm init
+npm install --save express socket.io
+</code></pre>
+3. use this boilerplate code for the server (perhaps in server.js or app.js):
+    <pre><code data-trim contenteditable>
+const express = require('express');
+const app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
+app.use(express.static('public'));
+// server code goes here!
+// first listen for connection using io.on
+// then... within callback, use socket.on, socket.emit, socket.broadcast, etc.
+// NOTE THAT WE ARE LISTENING WITH server, NOT app!
+server.listen(3000);
+</code></pre>
+4. use this boilerplate code for the markup (in `public/index.html`):
+  <pre><code data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script src="racer.js"&gt;&lt;/script&gt;
+&lt;button class="player1Btn"&gt;Move Tears of Joy &amp;rarr;&lt;/button&gt;
+&lt;div class="play-area"&gt;
+  &lt;div class="racer player1"&gt;&amp;#128514;&lt;/div&gt;
+  &lt;div class="racer player2"&gt;&amp;#128561;&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class="player2Btn"&gt;Move Face Screaming &amp;rarr;&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+5. use this boilerplate code for the client (in `public/racer.js`):
+    <pre><code data-trim contenteditable>
+    const socket = io();
+</code></pre>
 
-Choose __one of these two small React applications__ to implement &rarr;
+## Deployment
 
-1. __Binary Number__
-    * create an application that calculates the decimal value of an 8-bit binary number
-    * start with 8 bits all set to 0
-    * add the decimal value of the binary number composed of the 8 bits
-    * each bit can be clicked so that it is set to either 0 or 1
-    * every time a bit is clicked, the value of the bit will be toggled (0 goes to 1, 1 goes to 0)
-    * recalculate the decimal value every time a bit is updated
-    * the bits should all be adjacent to each other, any other styling is your discretion
-    * see the example interaction below:
-        ![bin](../resources/img/hw10-screen.gif)
-2. __Card Calculator__
-    * create an application that:
-        * uses a comma separated list of card values 
-        * ...to create a series of cards and 
-        * ... display the total value of all of the _valid_ cards in the list
-    * create a text input that allows entry of a comma separated list 
-    * using only the valid faces from the list, display the cards in the DOM 
-        * __they can all be the same suit__
-        * valid faces are J, Q, K, A
-        * or numbers 2 through 10
-    * the cards should styled such that:
-        * each card has a width and a height
-        * each card is displayed adjacent to each other
-        * any other styling is your discretion
-    * lastly, display the total of the valid cards (that is, the cards shown in the DOM)
-        * numbers will be counted as their numeric value
-        * J, Q, and K are worth 10
-        * an ace (A) will always count as 11
-    * see the example below:
-        ![calc](../resources/img/lab02-card-calculator.gif)
+### Deploying to glitch.com
 
-### Deployment
+1. [go to glitch.com/edit](https://glitch.com/edit/)
+2. modify the existing `package.json` so that it has both socket.io and express as requirements (but keep everything else the same)
+3. add/modify necessary files!
+    * for example...
+    * modify `server.js` (make sure you're listening with server obj)
+    * add `public/racer.html`
+    * change the name of `public/client.js` to `public/racer.js`
+    * etc.
+4. __change the port so that it looks in the env for the port number!__
+    * `server.listen(process.env.PORT);`
+5. click on the look link...  
+    * instantly deployed app!
+    * (click on logs link to see server output)
 
-To deploy your app in codepen.io... (only valid if you developed locally, otherwise, your code is _already there_)
+<div class="hideInner" markdown="block">
 
-1. configure babel, React and React DOM as shown in the gif above (see Instructions &rarr; setup)
-2. copy all of your __components__ over to the js panel (don't include any of the import statements)
-3. you may have to change `extends` so that it's `extends React.Component` for each component
-4. use ```ReactDom.render``` at the very end to render your main/root component:
-    ```ReactDOM.render(<App />, document.body);```
+## Major Hints (Click to Reveal)
+
+<div class="hidden" markdown="block">
+
+### Wait, How Do I Even?
+
+Most real-time games work by having the server be the _single source of truth_ for game state (for example, the positions of the emoji). 
+
+An easy way to implement this game is by:
+
+1. storing the positions of both emoji on the server (global variables would be sufficient)
+2. pushing out the exact positions of each emoji to the connected clients
+    * rather than incrementing the position
+    * (because it reduces the possibility of the positions becoming out of sync)
+
+
+### Don't feel like dealing with css? You can use this:
+
+<pre><code data-trim contenteditable>
+&lt;style type="text/css" media="screen"&gt;
+
+.racer {
+  position: absolute;
+  left: 0px;
+  font-size: 100px;
+}
+
+.player1 {
+  top: 50px;
+}    
+
+.player2 {
+  top: 300px
+}    
+
+.play-area {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  border-right: 3px dashed black;
+}
+
+button {
+  font-size: 3em;
+}
+&lt;/style&gt;
+
+</code></pre>
+
+
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', main);
+function main() {
+    const divs = document.querySelectorAll('.hideInner');
+
+    function handleClick() {
+        this.querySelector('div').classList.toggle('hidden');
+    }
+
+    divs.forEach((d) => {
+        d.addEventListener('click', handleClick);
+    });
+}
+
+</script>
+<style>
+.hidden {
+    display: none;
+}
+</style>
+
+
+</div>
+</div>
+
