@@ -247,7 +247,7 @@ Choose at least __8 points__ worth of these following topics (research and imple
 
 ### __12/4 11PM__ - Final Project Complete and Code is fully  _Deployed_ 
 
-* __all commits must be in by Monday, Dec 4th (repositories and forms will be closed 24 hours after due date to allow for late submissions)
+* __all commits must be in by Monday, Dec 4th__ (repositories and forms will be closed 24 hours after due date to allow for late submissions)
 * __project must be deployed__ on cims servers (or other platform, such as Heroku, gomix, zeit, etc.)
     * if your application needs to be restarted while being graded; I will contact you
     * you will not receive a penalty for restarting after the due date
