@@ -40,9 +40,9 @@
 
 __Reminders__: 
 
+* 12/4 - [submit final project using this form](https://docs.google.com/forms/d/e/1FAIpQLScdwz_VNkwh7N5KDVJ5ircSfaciFx88pqAOL7qyKXOmFOOwVQ/viewform)
 * Socket.IO Lab on Thursday, 11/28
 * React.IO Lab Next Tuesday
-* __Final Project Submission Form to be posted Tomorrow__
 * Quizzes for review
 * Final Exam 12/14
 
