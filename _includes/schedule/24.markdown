@@ -38,9 +38,14 @@
 </td>
 	<td markdown="block">
 
-__Reminders__: 
 
-* 12/4 - [submit final project using this form](https://docs.google.com/forms/d/e/1FAIpQLScdwz_VNkwh7N5KDVJ5ircSfaciFx88pqAOL7qyKXOmFOOwVQ/viewform)
+__Due 12/4__ 
+
+* [final project instructions](final-project.html#final_submit)
+* [submit final project using this form](https://docs.google.com/forms/d/e/1FAIpQLScdwz_VNkwh7N5KDVJ5ircSfaciFx88pqAOL7qyKXOmFOOwVQ/viewform)
+
+Other Reminders
+
 * Socket.IO Lab on Thursday, 11/28
 * React.IO Lab Next Tuesday
 * Quizzes for review
