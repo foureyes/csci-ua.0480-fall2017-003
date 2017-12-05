@@ -22,11 +22,11 @@
 </td>
 	<td markdown="block">
 
-{% comment %}
-* [Core ES6 Features](http://exploringjs.com/es6/ch_core-features.html)
-* [Socket IO How-To](http://socket.io/docs/)
-* [Socket IO Rooms](http://socket.io/docs/rooms-and-namespaces/)
-{% endcomment %}
+* [Hello World](https://facebook.github.io/react/docs/hello-world.html) and [Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
+* [Build With React](http://buildwithreact.com/)
+* [React Events](https://facebook.github.io/react/docs/events.html#supported-events)
+* [Using create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started)
+
 
 </td>
 	<td markdown="block">

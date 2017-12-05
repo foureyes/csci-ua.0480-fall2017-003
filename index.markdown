@@ -379,9 +379,7 @@ show react basics
 * Frontend Framework - Lab
 
 </td>
-<td></td><td></td><td markdown="block"></td>{% comment %}
 {% include schedule/26.markdown %}
-{% endcomment %}
 </tr>
 
 
@@ -389,9 +387,6 @@ show react basics
 <tr><td>27</td><td><strong>Dec 07</strong><br>Thu</td>
 <td markdown="block">
 * Review
-* Or...
-    * Maybe Flexbox
-    * Maybe CSS Meta Languages
 </td>
 <td></td><td></td><td markdown="block"></td>{% comment %}
 {% include schedule/27.markdown %}
