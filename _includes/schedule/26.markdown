@@ -1,12 +1,14 @@
 	<td markdown="block">
 
+__MongoDB Outage, Final Project Extended__
+
+* due today, 11pm
+* grace period up through wed, 12/6, 11pm
+
 Slides
 
-* MongoDB Outage, Final Project Extended
-    * due today, 11pm
-    * grace period up through wed, 11pm
 * [React Basics](slides/26/react.html)
-* [React Revisited](slides/26/react-webpack.html)
+* [React Revisited](slides/26/react-state-parent.html)
 * [React and Express / Using Webpack](slides/26/react-webpack-continued.html)
 
 {% comment %}
