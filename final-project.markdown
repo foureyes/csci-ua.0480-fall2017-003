@@ -245,25 +245,23 @@ Choose at least __8 points__ worth of these following topics (research and imple
 <br>
 <br>
 
-### __11/4 11PM__ - Final Project Complete and Code is fully  _Deployed_ 
-{% comment %}
+### __12/4 11PM__ - Final Project Complete and Code is fully  _Deployed_ 
 
-* __all commits must be in by Thursday, April 27th__ (repositories will be closed early Friday morning)
-* __project must be deployed__ on i6 (or other platform, such as Heroku, gomix, zeit, etc.)
+* __all commits must be in by Monday, Dec 4th__ (repositories and forms will be closed 24 hours after due date to allow for late submissions)
+* __project must be deployed__ on cims servers (or other platform, such as Heroku, gomix, zeit, etc.)
     * if your application needs to be restarted while being graded; I will contact you
     * you will not receive a penalty for restarting after the due date
-* __the [final project form submission](https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSfUNe5P9bzNBA1Z03b6NDeZEXe2qRRYBeewNWN1VnbLSkwgQQ/viewform) must be filled out__ (if a form is not submitted, you will receive a 0 for your project)
-* late submissions:
-    * +2 days 
-    * 20% penalty
-    * a late submission form will be posted 
+* __the [final project form submission](https://docs.google.com/forms/d/e/1FAIpQLScdwz_VNkwh7N5KDVJ5ircSfaciFx88pqAOL7qyKXOmFOOwVQ/viewform) must be filled out__ (if a form is not submitted, you will receive a 0 for your project)
+	* if you require a __specific user to be logged in__, please add the username and password in the form submission above
+	* if you used __unit testing__ or __functional testing__, upload a screen shot or an animated gif of your tests running to the documentation folder of your project; link to it in your form submission
+	* if you used __grunt__, __gulp__, or __webpack__ ... or some if you used a pre-processor like babel, sass, etc. ... link to the relevant configuration file in your form submission
+	* if you are using __facebook login__, and your application is in _testing mode_, add this user: `Eef Aqua` so that graders can test your application
 
 <br>
 <br>
 <br>
 
 <a name="suggestions">
-{% endcomment %}
 
 {% comment %}
 ## Potential Projects
