@@ -1,4 +1,6 @@
 
+End of Semester Assignment Schedule
+=====
 
 MON 03/20 Quiz DB and Auth Assigned
 WED 03/22 HW 05 ASSIGNED (DB 1), MS 01 ASSIGNED (PROPOSAL)
